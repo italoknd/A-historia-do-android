@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: 'android';
-  src: url("../fontes/idroid.otf") format('opentype');
+  src: url('../fontes/idroid.otf') format('opentype');
 }
 
 :root {
@@ -10,7 +10,7 @@
   --cor1: #2bdb81;
   --cor2: #00635cd5;
   --cor3: #6492ff9f;
-  --cor4: #01C287;
+  --cor4: #01c287;
 
   --fonte-padrao: arial, verdana, helvetica, sans-serif;
   --fonte-destaque: 'Bebas Neue', cursive;
@@ -28,7 +28,11 @@ body {
   font-family: var(--fonte-padrao);
 }
 
-p{
+a.externo::after{
+  content: '\00A0\1F517';
+}
+
+p {
   margin: 15px 0px;
 }
 
@@ -48,7 +52,7 @@ header > h1 {
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.26);
 }
 
-header > p{
+header > p {
   color: whitesmoke;
   font-family: var(--fonte-padrao);
   font-size: 1.3em;
@@ -60,7 +64,7 @@ header > p{
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.164);
 }
 
-nav{
+nav {
   background-color: var(--cor2);
   padding: 10px;
   box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.239);
@@ -74,13 +78,13 @@ nav > a {
   transition-duration: 0.3s;
 }
 
-nav > a:hover{
+nav > a:hover {
   background-color: var(--cor1);
   color: var(--cor2);
   border-radius: 3px;
 }
 
-main{
+main {
   background-color: white;
   min-width: 300px;
   max-width: 817px;
@@ -109,18 +113,18 @@ article > h2 {
   text-indent: 8px;
 }
 
-main > article > p{
+main > article > p {
   text-align: justify;
-  text-indent: 30px;/*insere a margem no inicio dos paragrafos*/
-  line-height: 2em;/*dita o espaçamento de altura entre as linhas do p*/
+  text-indent: 30px; /*insere a margem no inicio dos paragrafos*/
+  line-height: 2em; /*dita o espaçamento de altura entre as linhas do p*/
   font-size: 1.01em;
 }
 
-main strong{
+main strong {
   color: var(--cor1);
 }
 
-main a{
+main a {
   font-weight: bold;
   color: var(--cor2);
   background-color: var(--cor0);
@@ -128,24 +132,24 @@ main a{
   transition-duration: 0.3s;
 }
 
-main a:hover{
+main a:hover {
   text-decoration: underline;
   border-radius: 4px;
   padding: 2px 4px;
 }
 
-article > picture > img{
+article > picture > img {
   width: 100%;
 }
 
-article img.pequena{
+article img.pequena {
   max-width: 350px;
   display: block;
   margin: auto;
 }
 
 /*Vídeo responsivo*/
-article div.video{
+article div.video {
   background-color: var(--cor4);
   margin: 30px 0px;
   padding: 20px;
@@ -153,64 +157,68 @@ article div.video{
   position: relative;
 }
 
-article div.video > iframe{
+article div.video > iframe {
   position: absolute;
   top: 5%;
   left: 5%;
   width: 90%;
   height: 90%;
-
 }
 /*Vídeo responsivo*/
 
-main > article > h3{
-  background-color: var(--cor2);
-  color: whitesmoke;
-  padding: 5px;
-  text-indent: 10px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-main > article > aside{
+main > article > aside {
   background-color: var(--cor1);
   color: whitesmoke;
   line-height: 2em;
   padding: 10px 20px 20px 20px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-radius: 10px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.294);
 }
 
-aside p{
+aside > h3 {
+  background-color: var(--cor2);
+  color: whitesmoke;
+  text-indent: 10px;
+  padding: 5px;
+  margin: -10px -20px 0px -20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+aside p {
   text-indent: 20px;
   text-align: justify;
 }
 
-aside a{
+aside > ul {
+  list-style-position: inside;
+  column-count: 2; /*define a quantidade de colunas na qual será divida a lista*/
+}
+
+aside a {
   background-color: var(--cor1);
 }
 
-aside strong{
+aside strong {
   color: var(--cor2);
 }
 
-footer{
+footer {
   color: whitesmoke;
   background-color: var(--cor2);
   padding: 10px;
   font-family: var(--fonte-padrao);
 }
 
-footer > p{
+footer > p {
   text-align: center;
 }
 
-footer > p > a{
+footer > p > a {
   transition-duration: 0.2s;
 }
 
-footer > p > a:hover{
+footer > p > a:hover {
   background-color: var(--cor1);
   color: var(--cor2);
   border-radius: 3px;
@@ -218,6 +226,6 @@ footer > p > a:hover{
   border-radius: 8px;
 }
 
-footer > p > a:visited{
+footer > p > a:visited {
   color: whitesmoke;
 }
