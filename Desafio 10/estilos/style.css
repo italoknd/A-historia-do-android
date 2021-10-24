@@ -5,6 +5,10 @@
   src: url('../fontes/idroid.otf') format('opentype');
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 :root {
   --cor0: #3cff9a;
   --cor1: #2bdb81;
@@ -208,6 +212,7 @@ footer {
   background-color: var(--cor2);
   padding: 10px;
   font-family: var(--fonte-padrao);
+  font-size: 1.1rem;
 }
 
 footer > p {
@@ -218,12 +223,8 @@ footer > p > a {
   transition-duration: 0.2s;
 }
 
-footer > p > a:hover {
-  background-color: var(--cor1);
-  color: var(--cor2);
-  border-radius: 3px;
-  padding: 2px 5px;
-  border-radius: 8px;
+footer  > p > a:hover{
+  text-decoration: underline;
 }
 
 footer > p > a:visited {
